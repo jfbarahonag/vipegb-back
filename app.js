@@ -6,6 +6,20 @@ app.get('/', (req, res) => {
     res.send("Hey from back")
 })
 
+app.post('/user', (req, res) => {
+    res.send("Got a POST request")
+})
+
+app.put('/user', (req, res) => {
+    res.send("Got a PUT request")
+})
+
+app.delete('/user', (req, res) => {
+    res.send("Got a DELETE request")
+})
+
+app.disable('x-powered-by')
+
 app.listen(port, () => {
     console.log(`Back listening at http://localhost:${port}`)
 })
